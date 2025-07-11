@@ -12,7 +12,7 @@ public class NamesController {
     public Flux<String> getNames() {
 
         List<String> names = List.of("One", "Two", "Three", "Four");
-        // Prueba
+
         return Flux.fromIterable(names);
 
     }
