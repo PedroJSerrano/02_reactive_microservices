@@ -1,0 +1,24 @@
+package controller;
+
+import init.Application;
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import reactor.test.StepVerifier;
+
+@SpringBootTest(classes = Application.class)
+class ApplicationTests {
+
+    @Autowired
+    NamesController controller;
+
+    @Test
+    void testGetNames() {
+        StepVerifier.create(controller.getNames())
+                .expectNext("One")
+                .expectNext("Two", "Three")
+                .expectNextCount(1)
+                .verifyComplete();
+    }
+
+}
