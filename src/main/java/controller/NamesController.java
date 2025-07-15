@@ -13,7 +13,7 @@ public class NamesController {
     @GetMapping(value = "/names")
     public Flux<String> getNames() {
 
-        List<String> names = List.of("One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight");
+        List<String> names = List.of("One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine");
         return Flux.fromIterable(names)
                 .delayElements(Duration.ofMillis(500));
     }
