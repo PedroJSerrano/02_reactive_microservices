@@ -38,6 +38,7 @@ jobs:
         uses: actions/setup-java@v4
         with:
           java-version: '21' # Puedes cambiar esto a la versión de Java que necesites (e.g., '8', '11', '21')
+          distribution : 'temurin'
           cache: 'maven' # Habilita el cache de Maven para acelerar las builds futuras
 
       # Paso 3: Instalación de dependencias, compilación y ejecución de pruebas con Maven.
