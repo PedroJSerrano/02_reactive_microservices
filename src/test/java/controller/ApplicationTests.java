@@ -20,6 +20,7 @@ class ApplicationTests {
                 .expectNext("Five", "Six")
                 .expectNext("Seven", "Eight", "Nine")
                 .expectNext("Ten")
+                .expectNextCount(1)
                 .verifyComplete();
     }
 
