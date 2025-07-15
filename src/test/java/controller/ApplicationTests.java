@@ -17,6 +17,7 @@ class ApplicationTests {
         StepVerifier.create(controller.getNames())
                 .expectNext("One")
                 .expectNext("Two", "Three", "Four")
+                .expectNext("Five")
                 .expectNextCount(2)
                 .verifyComplete();
     }

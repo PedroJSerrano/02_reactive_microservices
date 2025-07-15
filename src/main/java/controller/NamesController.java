@@ -14,7 +14,7 @@ public class NamesController {
     @GetMapping(value = "/names")
     public Flux<String> getNames() {
 
-        List<String> names = List.of("One", "Two", "Three", "Four", "Five", "Six");
+        List<String> names = List.of("One", "Two", "Three", "Four", "Five", "Six", "Seven");
         return Flux.fromIterable(names)
                 .delayElements(Duration.ofSeconds(1));
     }
